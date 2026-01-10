@@ -125,3 +125,4 @@ if st.button("Analyze Packet"):
             st.success("Traffic Status: BENIGN (Safe)")
     else:
         st.error("Please train the model first!")
+
