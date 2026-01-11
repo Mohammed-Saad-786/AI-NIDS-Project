@@ -41,4 +41,5 @@ AI_NIDS_Project/
 ├── app.py               # Main Streamlit application and ML logic
 ├── Dockerfile           # Container configuration
 ├── requirements.txt     # Python dependencies
-└── README.md            # Metadata and documentation
+└── README.md            # Metadata and documentation.
+
