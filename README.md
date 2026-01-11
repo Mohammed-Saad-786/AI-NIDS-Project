@@ -1,28 +1,44 @@
 ---
-title: AI Powered Network Intrusion Detection System
+title: AI-Powered Network Intrusion Detection System
 emoji: 🛡️
 colorFrom: blue
-colorTo: green
+colorTo: red
 sdk: docker
 app_port: 8501
-pinned: false
+pinned: true
+short_description: A machine learning dashboard to detect network attacks in real-time.
 ---
 
-# AI-Powered Network Intrusion Detection System (NIDS)
+# 🛡️ AI-Powered Network Intrusion Detection System (NIDS)
 
-This project uses a **Random Forest Classifier** to detect and classify network traffic as either "Benign" (Safe) or "Malicious" (Threat). It features an interactive dashboard for training the AI and simulating live traffic.
+This project is an AI-driven security dashboard designed to monitor and classify network traffic. Using a **Random Forest Classifier**, the system distinguishes between safe (**Benign**) and malicious (**Attack**) traffic patterns.
 
-## 🚀 How to Run
-Once deployed on Hugging Face, simply:
-1. Go to the **App** tab.
-2. Click **Train Model Now** in the sidebar.
-3. View the **Performance Metrics** and use the **Traffic Simulator** to test custom inputs.
+## 🚀 Live Demo
+You can access the stable version of the dashboard here:
+[Direct Link (Zero-Vibration)](https://huggingface.co/spaces/mohd-saad/ai-nids-dashboard?embed=true)
 
-## 🛠️ Technology Stack
-* **Language:** Python
-* **ML Model:** Random Forest (Scikit-Learn)
-* **Dashboard:** Streamlit
-* **Deployment:** Docker / Hugging Face Spaces
+---
 
-## 📊 Dataset
-The model is trained on synthetic data based on the **CIC-IDS2017** benchmark, including features like Flow Duration, Packet Length, and Active Time.
+## 🛠️ Key Features
+* **Real-Time Classification:** Instantly classifies network packets based on traffic features.
+* **Interactive Training:** Users can adjust training data size and model complexity via the sidebar.
+* **Performance Metrics:** Displays Accuracy, Confusion Matrix, and Detection counts.
+* **Attack Simulator:** Manual input section to test specific "what-if" network scenarios.
+
+## 🧪 Technical Stack
+* **Language:** Python 3.9
+* **UI Framework:** Streamlit
+* **Machine Learning:** Scikit-Learn (Random Forest)
+* **Data Handling:** Pandas & NumPy
+* **Visualization:** Seaborn & Matplotlib
+* **Deployment:** Docker & Hugging Face Spaces
+
+## 📂 Project Structure
+```text
+AI_NIDS_Project/
+├── .streamlit/          
+│   └── config.toml      # Server and UI stabilization settings
+├── app.py               # Main Streamlit application and ML logic
+├── Dockerfile           # Container configuration
+├── requirements.txt     # Python dependencies
+└── README.md            # Metadata and documentation
